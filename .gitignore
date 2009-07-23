@@ -1,2 +1,2 @@
 *.deb
-debian/DEBIAN
+debian/DEBIAN/control

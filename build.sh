@@ -4,7 +4,6 @@
 name=hudson-swarm-slave
 version=1.0
 
-mkdir debian/DEBIAN || true
 cat > debian/DEBIAN/control << EOF
 Package: $name
 Version: $version
@@ -16,6 +15,8 @@ Maintainer: Kohsuke Kawaguchi <kohsuke.kawaguchi@sun.com>
 Description: Hudson swarm slave
 EOF
 
+# tell dpkg that this is a configuration file
+echo /etc/default/$name > debian/DEBIAN/conffiles
 
 # build a package
 pkg=${name}_${version}_all.deb
