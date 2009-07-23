@@ -11,7 +11,7 @@ Version: $version
 Section: base
 Priority: optional
 Architecture: all
-Depends: coreutils daemon
+Depends: coreutils, daemon
 Maintainer: Kohsuke Kawaguchi <kohsuke.kawaguchi@sun.com>
 Description: Hudson swarm slave
 EOF
