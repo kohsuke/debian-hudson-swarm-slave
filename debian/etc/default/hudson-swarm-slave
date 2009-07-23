@@ -1,0 +1,26 @@
+# defaults for hudson continuous integration server
+
+# pulled in from the init script; makes things easier.
+NAME=hudson-swarm-slave
+
+# location of java
+JAVA=/usr/bin/java
+
+# arguments to pass to java
+#JAVA_ARGS="-Xmx256m"
+
+PIDFILE=/var/run/hudson/hudson-swarm-slave.pid
+
+# user id to be invoked as (otherwise will run as root; not wise!)
+HUDSON_USER=hudson
+
+# hudson home location
+HUDSON_HOME=/files/hudson
+
+# log location.  this may be a syslog facility.priority
+HUDSON_LOG=/var/log/hudson/$NAME.log
+#HUDSON_LOG=daemon.info
+
+# arguments to pass to hudson.
+ncpu=$(cat /proc/cpuinfo | grep vendor_id | wc -l)
+HUDSON_ARGS="-master hudson.sfbay.sun.com -labels 'linux sfbay' -name $HOSTNAME -fsroot $HUDSON_HOME -executors $ncpu"
