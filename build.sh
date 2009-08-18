@@ -2,7 +2,7 @@
 # based on http://tldp.org/HOWTO/html_single/Debian-Binary-Package-Building-HOWTO/
 
 name=hudson-swarm-slave
-version=1.0
+version=1.1
 
 cat > debian/DEBIAN/control << EOF
 Package: $name
