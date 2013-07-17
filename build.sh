@@ -11,8 +11,8 @@ Section: base
 Priority: optional
 Architecture: all
 Depends: coreutils, daemon
-Maintainer: Kohsuke Kawaguchi <kohsuke.kawaguchi@sun.com>
-Description: Hudson swarm slave
+Maintainer: Kohsuke Kawaguchi <kk@kohsuke.org>
+Description: Jenkins swarm slave
 EOF
 
 # tell dpkg that this is a configuration file
